@@ -11,7 +11,7 @@ import { ThemeProvider } from './components/ThemeContext.jsx'
 createRoot(document.getElementById('root')).render(
   <Provider store={store}>
      <StrictMode>
-        <BrowserRouter basename=''>
+        <BrowserRouter basename='/WebResponsiveDrinkina'>
           <ThemeProvider>
             <App />
           </ThemeProvider>

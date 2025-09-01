@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-    baseURL:"http://localhost:8080/api/auth",
+    baseURL:"http://18.222.169.12:8080/api/auth",
 })
 
 export const requestCode = (name, phone, email) => 

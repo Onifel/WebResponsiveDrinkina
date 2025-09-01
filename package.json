@@ -2,7 +2,7 @@
   "name": "web_resp-drinkina",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Onifel.github.io/DrinkinaWebsite",
+  "homepage": "https://Onifel.github.io/WebResponsiveDrinkina",
   "type": "module",
   "scripts": {
     "dev": "vite",

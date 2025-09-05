@@ -13,6 +13,7 @@ import AnimatedText from '../components/AnimatedText'
 import { toast } from 'react-toastify'
 import { createOrder } from "../redux/orderSlice"
 import { clearCart } from "../redux/cartSlice"
+import { useNavigate } from 'react-router-dom'
 
 const Checkout = ({onClose}) => {
     const [isVisible, setIsVisible] = useState(true)
@@ -27,6 +28,7 @@ const Checkout = ({onClose}) => {
     const [selectedTip, setSelectedTip] = useState(null)
     const { user } = useSelector((state) => state.auth)
     const cartItems = useSelector((state) => state.cart)
+    const navigate = useNavigate()
 
     const handleTip = () => {
         setShowSlide(true)
@@ -43,6 +45,7 @@ const Checkout = ({onClose}) => {
     const handlePay = async () => {
         if (!user) {
             toast.error("Please log in before placing an order")
+            navigate('/signin')
             return
         }
 
@@ -54,7 +57,7 @@ const Checkout = ({onClose}) => {
         try {
             for (const item of cartItems) {
                 const orderData = {
-                    customerName: user?.name || "Guest",  // match backend DB column names
+                    customerName: user?.name || "Guest", 
                     drinkName: item.name,
                     quantity: item.quantity || 1,
                     price: item.price,

@@ -45,7 +45,11 @@ const Checkout = ({onClose}) => {
     const handlePay = async () => {
         if (!user) {
             toast.error("Please log in before placing an order")
-            navigate('/signin')
+            setIsVisible(false)
+            setTimeout(() => {
+                onClose()
+                navigate('/signin')
+            }, 200)
             return
         }
 

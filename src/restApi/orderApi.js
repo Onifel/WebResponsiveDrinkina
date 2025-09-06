@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://api.drinkina.org/api/orders",
+  baseURL: "https://34.230.11.212:8080/api/orders",
 });
 
 export const createOrderRequest = (orderData) => API.post("", orderData)

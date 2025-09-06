@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-    baseURL:"https://34.230.11.212:8080/api/auth",
+    baseURL:"http://api.drinkina.org/api/auth",
 })
 
 export const requestCode = (name, phone, email) => 

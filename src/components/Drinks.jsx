@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react'
 import LearnMore from "../motionPages/LearnMore";
 
 const Drinks = () => {
-  const allCoffees = [...drinkList]
   const [hoverL, setHoverL] = useState(false)
   const [hoverR, setHoverR] = useState(false)
   const [activeId, setActiveId] = useState(null)
@@ -35,11 +34,12 @@ const Drinks = () => {
     window.addEventListener("resize", handleResizeT)
     window.addEventListener("scroll", handleScrollY)
 
-    return (
-      () => window.removeEventListener('resize', handleResizeD),
-      () => window.removeEventListener('resize', handleResizeL),
-      () => window.removeEventListener('resize', handleResizeT)
-    )
+    return () => {
+      window.removeEventListener('resize', handleResizeD);
+      window.removeEventListener('resize', handleResizeL);
+      window.removeEventListener('resize', handleResizeT);
+      window.removeEventListener('scroll', handleScrollY);
+    }
   }, [])
 
   const handleLearnMore = (id) => {
@@ -65,7 +65,7 @@ const Drinks = () => {
         }
       <div className="allCoffees">
         {
-          allCoffees.map((cof, index) => (
+          drinkList.map((cof, index) => (
             <div 
               key={index} 
               className='drinklist'>

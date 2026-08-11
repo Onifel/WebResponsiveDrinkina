@@ -7,7 +7,6 @@ export const sendRequestCode = createAsyncThunk(
         try {
             const res = await requestCode(name, phone, email)
             console.log("📩 Backend response: ", res.data)
-            console.log("Your Drinkina code is: ", res.data.otpCode);
             
             return { name, phone, email}
         } catch (err) {

@@ -77,7 +77,7 @@ const Drinks = () => {
                       onMouseLeave={() => isDesktop && setHoverL(false)}
                       style={{
                         backgroundColor: isDesktop && hoverL ? cof.color : 'transparent',
-                        transition: "all 1s ease"
+                        transition: "all 0.5s ease"
                       }}
                     >
                       <img src={cof.img} className="cof tiltedL"/>
@@ -103,7 +103,7 @@ const Drinks = () => {
                       onMouseLeave={() => isDesktop && setHoverR(false)}
                       style={{
                         backgroundColor: isDesktop && hoverR ? cof.color : 'transparent',
-                        transition: "all 1s ease"
+                        transition: "all 0.5s ease"
                       }}
                     >
                       <div>

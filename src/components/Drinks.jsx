@@ -35,11 +35,12 @@ const Drinks = () => {
     window.addEventListener("resize", handleResizeT)
     window.addEventListener("scroll", handleScrollY)
 
-    return (
-      () => window.removeEventListener('resize', handleResizeD),
-      () => window.removeEventListener('resize', handleResizeL),
-      () => window.removeEventListener('resize', handleResizeT)
-    )
+    return () => {
+      window.removeEventListener('resize', handleResizeD);
+      window.removeEventListener('resize', handleResizeL);
+      window.removeEventListener('resize', handleResizeT);
+      window.removeEventListener("scroll", handleScrollY);
+    };
   }, [])
 
   const handleLearnMore = (id) => {

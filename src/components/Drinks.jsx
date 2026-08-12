@@ -77,7 +77,7 @@ const Drinks = () => {
                       onMouseLeave={() => isDesktop && setHoverL(false)}
                       style={{
                         backgroundColor: isDesktop && hoverL ? cof.color : 'transparent',
-                        transition: "all 0.5s ease"
+                        transition: "all 1s ease-in-out"
                       }}
                     >
                       <img src={cof.img} className="cof tiltedL"/>
@@ -88,7 +88,7 @@ const Drinks = () => {
                           <button 
                             onClick={() => handleLearnMore(index)} 
                             className={`btnOrder btnOrderL ${isDesktop && hoverL ? "hovered" : ""} ${isLaptop ? "laptop" : ""}`}
-                            >{isLaptop ? cof.btn : 'Learn More >'}</button>
+                          >{isLaptop ? cof.btn : 'Learn More >'}</button>
                           <button 
                             className={`btnOrder  btnOrderN ${isDesktop && hoverL ? "hovered" : ""} ${isLaptop ? "laptop" : ""}`} 
                             onClick={handleOrder}
@@ -103,7 +103,7 @@ const Drinks = () => {
                       onMouseLeave={() => isDesktop && setHoverR(false)}
                       style={{
                         backgroundColor: isDesktop && hoverR ? cof.color : 'transparent',
-                        transition: "all 0.5s ease"
+                        transition: "all 1s ease-in-out"
                       }}
                     >
                       <div>
@@ -116,7 +116,7 @@ const Drinks = () => {
                           >{isLaptop ? cof.btn : 'Learn More >'}</button>
                           <button
                             onClick={handleOrder}
-                            className={`btnOrder  btnOrderN ${isDesktop && hoverR ? "hovered" : ""} ${isLaptop ? "laptop" : ""}`} 
+                            className={`btnOrder  btnOrderN ${isDesktop && hoverR ? "hovered" : ""} ${isLaptop ? "laptop" : ""}`}
                           >{isLaptop ? 'Order Now' : ''}</button>
                         </div>
                       </div>

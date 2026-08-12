@@ -363,8 +363,7 @@ body.dark .linkDM {
   font-size: 15px;
 }
 
-.btnOrder.btnOrderL.hovered,
-.btnOrder.btnOrderL:hover {
+.btnOrder.btnOrderL.hovered {
   justify-content: center;
   width: 150px;
   border-color: #000;        
@@ -373,8 +372,7 @@ body.dark .linkDM {
   transform: translateX(20px);
 }
 
-.btnOrder.btnOrderN.hovered,
-.btnOrder.btnOrderN:hover {
+.btnOrder.btnOrderN.hovered {
   justify-content: center;
   width: 150px;
   background-color: #000;   
@@ -386,14 +384,12 @@ body.dark .btnOrder {
   color: #fff;
 }
 
-body.dark .btnOrder.btnOrderL.hovered,
-body.dark .btnOrder.btnOrderL:hover {
+body.dark .btnOrder.btnOrderL.hovered {
   border-color: #fff;
   margin-right: 20px;
 }
 
-body.dark .btnOrder.btnOrderN.hovered,
-body.dark .btnOrder.btnOrderN:hover {
+body.dark .btnOrder.btnOrderN.hovered {
   background-color: #fff;
   color: #000;
   border-color: transparent;
